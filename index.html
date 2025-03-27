@@ -93,17 +93,25 @@
       border-left: 4px solid #92a98c;
       padding-left: 0.8rem;
     }
-    .grid {
+    .slider {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    .slider::-webkit-scrollbar {
+      display: none;
     }
     .card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 300px;
       background-color: #fff;
       border-radius: 14px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
-      flex: 1 1 calc(33% - 2rem);
       transition: transform 0.2s;
     }
     .card:hover {
@@ -138,7 +146,7 @@
 <body>
 
 <header>
-  <h1>花蓮莫內花園民宿</h1>
+  <h1>莫內花園民宿</h1>
   <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
     <span></span>
     <span></span>
@@ -158,26 +166,40 @@
 
 <section class="section">
   <h3>🏠 房型介紹（可預約）</h3>
-  <div class="grid">
+  <div class="slider">
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?bedroom" alt="房型1" />
+      <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf" alt="房型1" />
       <div class="card-content">
         <h4>花園雙人房</h4>
         <p>NT$2,800／晚，含早餐，落地窗景觀。</p>
       </div>
     </div>
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?hotel-room" alt="房型2" />
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="房型2" />
       <div class="card-content">
         <h4>森林四人房</h4>
         <p>NT$3,800／晚，適合家庭旅遊，附浴缸。</p>
       </div>
     </div>
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?cozy-room" alt="房型3" />
+      <img src="https://images.unsplash.com/photo-1559599238-21f2c2134a47" alt="房型3" />
       <div class="card-content">
         <h4>單人書房</h4>
         <p>NT$1,800／晚，適合獨旅，附閱讀空間。</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="房型4" />
+      <div class="card-content">
+        <h4>花園陽台套房</h4>
+        <p>NT$3,200／晚，附戶外陽台與泡茶區。</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586105251261-72a756497a12" alt="房型5" />
+      <div class="card-content">
+        <h4>景觀閣樓房</h4>
+        <p>NT$3,500／晚，樓中樓設計，景觀視野佳。</p>
       </div>
     </div>
   </div>
@@ -211,7 +233,7 @@
 </section>
 
 <footer>
-  地址：花蓮縣壽豐鄉麗湖路123號｜電話：03-1234567｜© 2025 花蓮莫內花園民宿
+  地址：花蓮縣壽豐鄉麗湖路123號｜電話：03-1234567｜© 2025 莫內花園民宿
 </footer>
 
 </body>
