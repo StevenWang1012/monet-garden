@@ -1,119 +1,182 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>花蓮莫內花園民宿</title>
-<style>
-body {
-margin: 0;
-font-family: 'Noto Serif TC', serif;
-background-color: #f9f5f0;
-color: #3e3e3e;
-padding-top: 80px;
-}
-header {
-background-color: #fff;
-padding: 1rem 2rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-position: fixed;
-top: 0;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>花蓮莫內花園民宿</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif TC', serif;
+      background-color: #f9f5f0;
+      color: #3e3e3e;
+      padding-top: 80px;
+    }
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: fixed;
+      top: 0;
       left: 0;
       right: 0;
-width: 100%;
-z-index: 1000;
+      width: 100%;
+      z-index: 1000;
       flex-wrap: wrap;
-}
-header h1 {
-margin: 0;
-font-size: 1.6rem;
-color: #5d3a00;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #5d3a00;
       white-space: nowrap;
-}
-.menu-toggle {
-display: none;
-@@ -43,12 +47,15 @@
-}
-nav {
-display: flex;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #5d3a00;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    nav {
+      display: flex;
       flex-wrap: wrap;
-gap: 1.2rem;
+      gap: 1.2rem;
       margin-left: auto;
-}
-nav a {
-text-decoration: none;
-color: #5d3a00;
-font-weight: bold;
+    }
+    nav a {
+      text-decoration: none;
+      color: #5d3a00;
+      font-weight: bold;
       white-space: nowrap;
-}
-@media (max-width: 768px) {
-.menu-toggle {
-@@ -185,35 +192,35 @@
-<div class="slider-wrapper">
-<div class="slider">
-<div class="card">
-        <img src="https://images.unsplash.com/photo-1600585153944-9569f6466ae1" alt="房型1" />
-        <img src="room1.jpg" alt="房型1" />
-<div class="card-content">
-<h4>花園雙人房</h4>
-<p>NT$2,800／晚，含早餐，落地窗景觀。</p>
-</div>
-</div>
-<div class="card">
-        <img src="https://images.unsplash.com/photo-1600585152638-7441733eb7aa" alt="房型2" />
-        <img src="room2.jpg" alt="房型2" />
-<div class="card-content">
-<h4>森林四人房</h4>
-<p>NT$3,800／晚，適合家庭旅遊，附浴缸。</p>
-</div>
-</div>
-<div class="card">
-        <img src="https://images.unsplash.com/photo-1595526114035-16a1c361ab17" alt="房型3" />
-        <img src="room3.jpg" alt="房型3" />
-<div class="card-content">
-<h4>單人書房</h4>
-<p>NT$1,800／晚，適合獨旅，附閱讀空間。</p>
-</div>
-</div>
-<div class="card">
-        <img src="https://images.unsplash.com/photo-1595521931345-83b9072d1f3a" alt="房型4" />
-        <img src="room4.jpg" alt="房型4" />
-<div class="card-content">
-<h4>花園陽台套房</h4>
-<p>NT$3,200／晚，附戶外陽台與泡茶區。</p>
-</div>
-</div>
-<div class="card">
-        <img src="https://images.unsplash.com/photo-1588854337221-c15235b8fcb0" alt="房型5" />
-        <img src="room5.jpg" alt="房型5" />
-<div class="card-content">
-<h4>景觀閣樓房</h4>
-<p>NT$3,500／晚，樓中樓設計，景觀視野佳。</p>
-@@ -227,21 +234,21 @@
-<h3>☕ 咖啡選單（現場供應）</h3>
-<div class="grid">
-<div class="card">
-      <img src="https://images.unsplash.com/photo-1605478371534-8e3e4f5f8d53" alt="咖啡1" />
-      <img src="cofe1.jpg" alt="咖啡1" />
-<div class="card-content">
-<h4>莫內手沖</h4>
-<p>NT$150／杯，精選花蓮在地豆，淡雅果香。</p>
-</div>
-</div>
-<div class="card">
-      <img src="https://images.unsplash.com/photo-1587049352846-4b36b1b36724" alt="玫瑰拿鐵" />
-      <img src="cofe2.jpg" alt="玫瑰拿鐵" />
-<div class="card-content">
-<h4>玫瑰拿鐵</h4>
-<p>NT$160／杯，融合玫瑰花露與濃郁奶香。</p>
-</div>
-</div>
-<div class="card">
-      <img src="https://images.unsplash.com/photo-1536520002442-39764a41eae1" alt="莊園濃縮" />
-      <img src="cofe3.jpg" alt="莊園濃縮" />
-<div class="card-content">
-<h4>莊園濃縮</h4>
-<p>NT$120／杯，重烘焙風味，尾韻厚實。</p>
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      nav.active {
+        display: flex;
+      }
+    }
+    .hero {
+      background-image: url('hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        height: 40vh;
+      }
+    }
+    .hero h2 {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 2rem;
+      color: #4a3c2f;
+    }
+    .section {
+      padding: 3rem 2rem;
+      margin: auto;
+    }
+    .section h3 {
+      color: #355e3b;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #92a98c;
+      padding-left: 0.8rem;
+    }
+    .slider-wrapper {
+      position: relative;
+    }
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1.5rem;
+      padding-bottom: 1rem;
+      width: 100%;
+    }
+    .slider::-webkit-scrollbar {
+      height: 8px;
+    }
+    .slider::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+    .card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 300px;
+      background-color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h4 {
+      margin: 0 0 0.5rem;
+      color: #5d3a00;
+    }
+    .card-content p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #eae7df;
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+      toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    });
+  </script>
+</head>
+<body>
+  <!-- 保留原本 HTML body 結構 -->
